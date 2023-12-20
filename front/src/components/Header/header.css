@@ -43,7 +43,7 @@ html {
     margin-right: 0.5rem;
   }
   .main-nav-item i{
-    padding-right: 5px;
+    padding:0px  10px;
   }
   
   .main-nav-item:hover {

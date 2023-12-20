@@ -5,7 +5,7 @@ const initialState = {
   firstName: "",
   lastName: "",
   isLogged: false,
-  toker: "",
+  token: "",
 };
 
 const userReducer = (state = initialState, action) => {
