@@ -6,6 +6,7 @@ import './index.css';
 import Home from './pages/Home/home.jsx';
 import Signin from './pages/Signin/signin.jsx';
 import User from './pages/Users/user.jsx';
+import Admin from './pages/admin/admin.jsx'
 import store from './redux/store.js';
 import { Provider } from 'react-redux';
 
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: '/user',
         element: <User />,
+      },
+      {
+        path: '/admin',
+        element: <Admin />,
       },
     ],
   },

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { login } from '../../redux/actions/user.actions';
+import { editUser, login } from '../../redux/actions/user.actions';
 
 import '../Signin/signin.css';
 import { useNavigate } from 'react-router-dom';
@@ -10,6 +10,7 @@ const signin = () => {
     email: "tony@stark.com",
     password: "password123",
   })
+  
 
   const handleChange = (e) => {
     setData({...data,[e.target.name]: e.target.value})
@@ -27,16 +28,27 @@ const signin = () => {
       },
       body: JSON.stringify(data)
     })
-    const user = await response.json()
+    const token = await response.json()
+
     if (response.ok) {
-      dispatch(login(user.body))
+      dispatch(login(token.body))
+    }
+
+    const userResponse = await fetch('http://localhost:3001/api/v1/user/profile', {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${token.body.token}`
+      }
+    })
+    const userData = await userResponse.json()
+    console.log(userData)
+    if (response.ok) {
+      dispatch(editUser(userData.body))
       navigate('/user')
     }
 
-
   }
 
-  console.log(data)
   return (
     <section className="main bg-dark">
       <section className="sign-in-content">

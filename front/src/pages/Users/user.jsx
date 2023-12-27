@@ -1,15 +1,30 @@
-import '../Users/user.css';
+import { useSelector } from "react-redux";
+import "../Users/user.css";
+import { NavLink, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
-const user = () => {
+const User = () => {
+  const user = useSelector(store => store.user)
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if (!user.isLogged) {
+      navigate('/signin')
+    }
+
+  }, [])
+
   return (
     <main className="main bg-dark">
       <div className="header">
         <h1>
           Welcome back
           <br />
-          Tony Jarvis!
+          {user.userName}
         </h1>
-        <button className="edit-button">Edit Name</button>
+          <button className="edit-button" type="" >
+           <NavLink to='/Admin'> Edit Name </NavLink>
+          </button>
       </div>
       <h2 className="sr-only">Accounts</h2>
       <section className="account">
@@ -46,4 +61,4 @@ const user = () => {
   );
 };
 
-export default user;
+export default User;

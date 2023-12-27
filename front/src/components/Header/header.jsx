@@ -1,14 +1,13 @@
 import { NavLink } from 'react-router-dom';
 import ImgArgentBank from '../assets/argentBankLogo.webp';
 import '../Header/header.css';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { logout } from '../../redux/actions/user.actions';
-
 
 const header = () => {
   const user = useSelector(store => store.user);
-
-  const logoutHandler = () => dispatch(logout);
+ const dispatch = useDispatch()
+  const logoutHandler = () => dispatch(logout(user));
   
   return (
     <section className="main-nav">
@@ -25,9 +24,11 @@ const header = () => {
           <i className="fa fa-user-circle"></i>
           Sign In
         </NavLink>}
-{        user.isLogged &&<NavLink to='/' onClick={logoutHandler}>
+{        user.isLogged &&<NavLink to='/user'>
           <i className="fa fa-user-circle"></i>
           Tony
+        </NavLink>}
+        {        user.isLogged &&<NavLink to='/' onClick={logoutHandler}>
           <i class="fa fa-sign-out"></i>
           Sign Out
         </NavLink>}

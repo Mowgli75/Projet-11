@@ -5,17 +5,16 @@ export const login = (payload) => {
   };
 };
 
-export const getInfo = (payload) => {
+export const logout = (payload) => {
   return {
-    type: "GET INFO",
+    type: "LOGOUT",
     payload,
   };
 };
 
-export const logout = (payload) => {
-    return {
-      type: "LOGOUT",
-      payload,
-    };
+export const editUser = (payload) => {
+  return {
+    type: "EDIT_USER",
+    payload,
   };
-
+};
