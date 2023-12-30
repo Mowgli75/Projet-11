@@ -2,10 +2,10 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { editUser, login } from '../../redux/actions/user.actions';
 
-import '../Signin/signin.css';
+import '../Signin/Signin.css';
 import { useNavigate } from 'react-router-dom';
 
-const signin = () => {
+const Signin = () => {
   const [data, setData] = useState({
     email: "tony@stark.com",
     password: "password123",
@@ -74,4 +74,4 @@ const signin = () => {
   );
 };
 
-export default signin;
+export default Signin;

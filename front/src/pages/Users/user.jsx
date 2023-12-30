@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import "../Users/user.css";
+import "../Users/User.css";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 

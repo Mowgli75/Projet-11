@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../admin/admin.css";
+import "../admin/Admin.css";
 import { useDispatch, useSelector } from "react-redux";
 import { editUser } from "../../redux/actions/user.actions";
 import { NavLink, useNavigate } from "react-router-dom";

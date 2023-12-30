@@ -1,6 +1,6 @@
-import '../Footer/footer.css';
+import '../Footer/Footer.css';
 
-const footer = () => {
+const Footer = () => {
   return (
     <footer className="footer">
       <p className="footer-text">Copyright 2020 Argent Bank</p>
@@ -8,4 +8,4 @@ const footer = () => {
   );
 };
 
-export default footer;
+export default Footer;

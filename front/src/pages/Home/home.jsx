@@ -1,9 +1,10 @@
-import Banner from '../../components/Banner/banner';
+import Banner from '../../components/Banner/Banner';
 
-export default function main() {
+export default function Main() {
   return (
     <main>
       <Banner />
     </main>
   );
 }
+

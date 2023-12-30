@@ -1,3 +1,7 @@
+export const LOGIN = "user/LOGIN"
+export const LOGOUT = "user/LOGOUT"
+export const EDIT_USER = "user/USER_EDIT"
+
 const initialState = {
   id: "",
   email: "",
@@ -10,11 +14,11 @@ const initialState = {
 
 const userReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "LOGIN":
+    case LOGIN:
       return { ...state, ...action.payload, isLogged: true };
-    case "LOGOUT":
+    case LOGOUT:
       return { ...initialState };
-    case "EDIT_USER":
+    case EDIT_USER:
       return { ...state, ...action.payload };
     default:
       return state;

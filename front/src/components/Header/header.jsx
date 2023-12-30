@@ -1,10 +1,10 @@
 import { NavLink } from 'react-router-dom';
 import ImgArgentBank from '../assets/argentBankLogo.webp';
-import '../Header/header.css';
+import '../Header/Header.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { logout } from '../../redux/actions/user.actions';
 
-const header = () => {
+const Header = () => {
   const user = useSelector(store => store.user);
  const dispatch = useDispatch()
   const logoutHandler = () => dispatch(logout(user));
@@ -37,4 +37,4 @@ const header = () => {
   );
 };
 
-export default header;
+export default Header;
