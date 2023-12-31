@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import ImgArgentBank from '../assets/argentBankLogo.webp';
-import '../Header/Header.css';
+import './Header/Header.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { logout } from '../../redux/actions/user.actions';
 
