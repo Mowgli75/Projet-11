@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { editUser, login } from '../../redux/actions/user.actions';
 
-import '../Signin/Signin.css';
+import './Signin/Signin.css';
 import { useNavigate } from 'react-router-dom';
 
 const Signin = () => {

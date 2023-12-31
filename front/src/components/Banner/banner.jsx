@@ -1,5 +1,5 @@
 import React from "react";
-import "../Banner/Banner.css";
+import "./Banner/Banner.css";
 import ImgCat from "../assets/icon-chat.webp";
 import ImgMoney from "../assets/icon-money.webp"
 import ImgSecurity from "../assets/icon-security.webp"
